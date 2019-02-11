@@ -20,6 +20,14 @@ export class MainComponent implements OnInit {
   addPost(event: Event) {
     let object = { title: this.title, post: this.post, author: this.author, key: this.key };
     this.PostArray.push(object);
+    this.PostArray.sort(function(a , b){
+      if(a.key > b.key){
+        return 1;
+      }
+      if(a.key < b.key){
+        return -1;
+      }
+    })
     console.log(this.key);
     this.title = null;
     this.post = null;
