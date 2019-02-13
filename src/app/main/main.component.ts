@@ -6,35 +6,12 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./main.component.css"]
 })
 export class MainComponent implements OnInit {
-  // PostArray: [{ title: string; post: string; author: string }] = [
-  //   { title: "TestPost", post: " Testing blog", author: "Bill" }
-  // ];
+  PostArray: [{ title: string; post: string; author: string }] = [];
 
-  PostArray: [{ title: string; post: string; author: string; key:number }] = [];
-
-  title = '';
-  post = '';
-  author = '';
-  key = Date.now();
-
-  addPost(event: Event) {
-    let object = { title: this.title, post: this.post, author: this.author, key: this.key };
-    this.PostArray.push(object);
-    this.PostArray.sort(function(a , b){
-      if(a.key > b.key){
-        return 1;
-      }
-      if(a.key < b.key){
-        return -1;
-      }
-    })
-    console.log(this.key);
-    this.title = null;
-    this.post = null;
-    this.author = null;
-    this.key = Date.now();
+  updateList(PostArr: { title: string, post: string, author: string, key: number }) {
+    this.PostArray.push(PostArr)
   }
-
+  
   constructor() {}
 
   ngOnInit() {}

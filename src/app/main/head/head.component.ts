@@ -6,10 +6,9 @@ import { Component, OnInit, Input} from "@angular/core";
   styleUrls: ["./head.component.css"]
 })
 export class HeadComponent implements OnInit {
-  @Input() Post: [{ title: string; post: string; author: string }] = [
-    { title: "TestPost", post: " Testing blog", author: "Bill" }
-  ];
+  @Input() Post: [{ title: string; post: string; author: string }] = [];
 
+  
   constructor() {}
 
   ngOnInit() {}

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { HeadComponent } from './main/head/head.component';
+import { AddpostComponent } from './main/addpost/addpost.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HeadComponent
+    HeadComponent,
+    AddpostComponent,
   ],
   imports: [
     BrowserModule,

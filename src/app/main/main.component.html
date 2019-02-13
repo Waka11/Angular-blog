@@ -1,15 +1,3 @@
-<br />
-<hr>
-<br />
-<input type="text" placeholder="title" class='form-control' [(ngModel)]='title'>
-<br />
-<input type="text" placeholder="post" class='form-control' [(ngModel)]='post'>
-<br />
-<input type="text" placeholder="author" class='form-control' [(ngModel)]='author'>
-<br />
-<button class="btn btn-primary" (click)='addPost($event)'>ADD</button>
-<br />
-<br />
-<hr>
-<app-head *ngFor="let Item of PostArray" [Post]="Item"></app-head>
+<app-addpost (onAddPost)='updateList($event)'></app-addpost>
 
+<app-head *ngFor="let Item of PostArray" [Post]="Item"></app-head>
