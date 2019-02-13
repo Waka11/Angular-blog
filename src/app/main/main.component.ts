@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./main.component.css"]
 })
 export class MainComponent implements OnInit {
-  PostArray: [{ title: string; post: string; author: string }] = [];
+  PostArray: [{ title: string; post: string; author: string, key:number }] = [{ title: 'TEST', post: 'TEST2', author:'TEST3', key: Date.now()  }];
 
   updateList(PostArr: { title: string, post: string, author: string, key: number }) {
     this.PostArray.push(PostArr)

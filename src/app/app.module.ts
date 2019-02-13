@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { HeadComponent } from './main/head/head.component';
 import { AddpostComponent } from './main/addpost/addpost.component';
+import { AuthorComponent } from './author/author.component';
+import { LoginFormComponent } from './author/login-form/login-form.component';
+import { LoginListComponent } from './author/login-list/login-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { AddpostComponent } from './main/addpost/addpost.component';
     MainComponent,
     HeadComponent,
     AddpostComponent,
+    AuthorComponent,
+    LoginFormComponent,
+    LoginListComponent,
   ],
   imports: [
     BrowserModule,
