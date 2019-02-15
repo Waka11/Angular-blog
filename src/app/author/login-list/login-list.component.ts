@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-login-list',
-  templateUrl: './login-list.component.html',
-  styleUrls: ['./login-list.component.css']
+  selector: "app-login-list",
+  templateUrl: "./login-list.component.html",
+  styleUrls: ["./login-list.component.css"]
 })
 export class LoginListComponent implements OnInit {
+  @Input() User: [{ login: string; password: string }] = [
+    { login: "1111", password: "1111" }
+  ];
 
-  constructor() { }
+  correctLogin = "1234";
+  correctPassword = "4321";
+
+  classname = "";
+
+  constructor() {}
 
   ngOnInit() {
+    if (
+      this.User.login !== this.correctLogin ||
+      this.User.password !== this.correctPassword
+    ) {
+      this.classname = "false";
+    } else {
+      this.classname = "true";
+    }
   }
-
 }

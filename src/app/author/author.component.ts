@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
-
+  UserArray: [{login: string, password: string}] = [];
+  
+  UpdateUserArray(UserArr: {login:string, password: string}){
+    this.UserArray.push(UserArr);
+  }
   constructor() { }
 
   ngOnInit() {

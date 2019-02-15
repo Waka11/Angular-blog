@@ -1,0 +1,11 @@
+.true{
+    background-color: chartreuse;
+}
+.false{
+    background-color: crimson;
+}
+.true, .false{
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bolder;
+}

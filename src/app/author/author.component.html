@@ -1,2 +1,2 @@
-<app-login-form></app-login-form>
-<app-login-list></app-login-list>
+<app-login-form (onAddVerif)='UpdateUserArray($event)'></app-login-form>
+<app-login-list *ngFor="let Item of UserArray" [User]="Item"></app-login-list>
