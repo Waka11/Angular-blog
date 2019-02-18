@@ -1,3 +1,8 @@
-<app-addpost (onAddPost)='updateList($event)'></app-addpost>
+<app-addpost (onAddPost)="updateList($event)"></app-addpost>
 
-<app-head *ngFor="let Item of PostArray" [Post]="Item"></app-head>
+<app-head *ngFor="let Item of PostArray" [Post]="Item">
+  <div class="alert alert-warning">Post added</div>
+  <p>Title: {{ Item.title }}</p>
+  <p>Post: {{ Item.post }}</p>
+  <p>Author: {{ Item.author }}</p>
+</app-head>
