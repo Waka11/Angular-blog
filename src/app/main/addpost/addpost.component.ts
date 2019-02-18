@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-addpost",
@@ -22,15 +22,21 @@ export class AddpostComponent implements OnInit {
     key: number;
   }>();
 
-  AddPost() {
+  @ViewChild('BlogPostRef') BlogPostRef: ElementRef;
+
+  AddPost(BlogTitle: HTMLInputElement) {
+    console.log(BlogTitle.value);
+    console.log(this.BlogPostRef.nativeElement.value);
     this.onAddPost.emit({
-      title: this.title,
-      post: this.post,
+      title: BlogTitle.value,
+      post: this.BlogPostRef.nativeElement.value,
       author: this.author,
       key: this.key
     });
-    this.title = "";
-    this.post = "";
+    // this.title = "";
+    // this.post = "";
+    BlogTitle.value = null;
+    this.BlogPostRef.nativeElement.value = null;
     this.author = "";
     this.key = Date.now();
   }

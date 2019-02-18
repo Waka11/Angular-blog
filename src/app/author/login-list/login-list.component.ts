@@ -18,8 +18,8 @@ export class LoginListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    if(this.User.length >= 1 &&
-      this.User.login !== this.correctLogin ||
+    if (
+      (this.User.length >= 1 && this.User.login !== this.correctLogin) ||
       this.User.password !== this.correctPassword
     ) {
       this.classname = "false";

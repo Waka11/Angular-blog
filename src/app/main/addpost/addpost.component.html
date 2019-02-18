@@ -1,12 +1,14 @@
 <hr>
 <br />
-<input type="text" placeholder="title" class='form-control' [(ngModel)]='title'>
+<!-- <input type="text" placeholder="title" class='form-control' [(ngModel)]='title'> -->
+<input type="text" placeholder="title" class="form-control" #BlogTitle>
 <br />
-<input type="text" placeholder="post" class='form-control' [(ngModel)]='post'>
+<!-- <input type="text" placeholder="post" class='form-control' [(ngModel)]='post'> -->
+<input type="text" placeholder="post" class='form-control' #BlogPostRef>
 <br />
 <input type="text" placeholder="author" class='form-control' [(ngModel)]='author'>
 <br />
-<button class="btn btn-primary" (click)='AddPost($event)'>ADD</button>
+<button class="btn btn-primary" (click)='AddPost(BlogTitle)'>ADD</button>
 <br />
 <br />
 <hr>
