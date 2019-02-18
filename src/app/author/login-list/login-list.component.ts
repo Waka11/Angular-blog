@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class LoginListComponent implements OnInit {
   @Input() User: [{ login: string; password: string }] = [
-    { login: "1111", password: "1111" }
+    { login: "1234", password: "4321" }
   ];
 
   correctLogin = "1234";
@@ -18,7 +18,7 @@ export class LoginListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    if (
+    if(this.User.length >= 1 &&
       this.User.login !== this.correctLogin ||
       this.User.password !== this.correctPassword
     ) {
