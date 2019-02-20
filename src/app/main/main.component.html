@@ -1,8 +1,13 @@
 <app-addpost (onAddPost)="updateList($event)"></app-addpost>
 
-<app-head *ngFor="let Item of PostArray" [Post]="Item">
-  <div class="alert alert-warning">Post added</div>
-  <p>Title: {{ Item.title }}</p>
-  <p>Post: {{ Item.post }}</p>
-  <p>Author: {{ Item.author }}</p>
-</app-head>
+<div>
+  <app-head (click)="DeleteItem()" *ngFor="let Item of PostArray" [Post]="Item">
+    <span class="btn btn-outline-primary">
+      <div class="alert alert-warning">Post added</div>
+      <p>Title: {{ Item.title }}</p>
+      <p>Post: {{ Item.post }}</p>
+      <p>Author: {{ Item.author }}</p>
+    </span>
+  </app-head>
+</div>
+

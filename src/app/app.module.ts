@@ -11,6 +11,7 @@ import { AddpostComponent } from './main/addpost/addpost.component';
 import { AuthorComponent } from './author/author.component';
 import { LoginFormComponent } from './author/login-form/login-form.component';
 import { LoginListComponent } from './author/login-list/login-list.component';
+import { DhoverDirective } from '../directives/dhover.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LoginListComponent } from './author/login-list/login-list.component';
     AuthorComponent,
     LoginFormComponent,
     LoginListComponent,
+    DhoverDirective,
   ],
   imports: [
     BrowserModule,

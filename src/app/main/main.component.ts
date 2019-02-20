@@ -11,6 +11,10 @@ export class MainComponent implements OnInit {
   updateList(PostArr: { title: string, post: string, author: string, key: number }) {
     this.PostArray.push(PostArr)
   }
+
+  DeleteItem() {
+    // this.PostArray = [];
+  }
   
   constructor() {}
 
