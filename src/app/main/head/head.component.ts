@@ -19,14 +19,16 @@ import {
 })
 export class HeadComponent
   implements
-    OnInit,
-    DoCheck,
-    OnChanges,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy {
+    OnInit
+    //,
+    // DoCheck,
+    // OnChanges,
+    // AfterContentInit,
+    // AfterContentChecked,
+    // AfterViewInit,
+    // AfterViewChecked,
+    // OnDestroy 
+    {
   @Input() Post: [
     { title: string; post: string; author: string; key: number }
   ] = [{ title: "TEST", post: "TEST2", author: "TEST3", key: Date.now() }];
@@ -39,31 +41,31 @@ export class HeadComponent
     console.log("NG ON INIT");
   }
 
-  ngDoCheck() {
-    console.log("NG DO CHECK");
-  }
+  // ngDoCheck() {
+  //   console.log("NG DO CHECK");
+  // }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log("NG ON CHANGES", changes);
-  }
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log("NG ON CHANGES", changes);
+  // }
 
-  ngAfterContentInit() {
-    console.log("NG AFTER CONTENT INIT");
-  }
+  // ngAfterContentInit() {
+  //   console.log("NG AFTER CONTENT INIT");
+  // }
 
-  ngAfterContentChecked() {
-    console.log("NG AFTER CONTENT CHECKED");
-  }
+  // ngAfterContentChecked() {
+  //   console.log("NG AFTER CONTENT CHECKED");
+  // }
 
-  ngAfterViewInit() {
-    console.log("NG AFTER VIEW INIT");
-  }
+  // ngAfterViewInit() {
+  //   console.log("NG AFTER VIEW INIT");
+  // }
 
-  ngAfterViewChecked() {
-    console.log("NG AFTER VIEW CHECKED");
-  }
+  // ngAfterViewChecked() {
+  //   console.log("NG AFTER VIEW CHECKED");
+  // }
 
-  ngOnDestroy() {
-    console.log("NG ON DESTROY");
-  }
+  // ngOnDestroy() {
+  //   console.log("NG ON DESTROY");
+  // }
 }

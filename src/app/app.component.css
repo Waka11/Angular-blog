@@ -1,8 +1,16 @@
-.testClass{
-    font-weight: bolder;
-    color: violet;
+.testClass {
+  font-weight: bolder;
+  color: violet;
 }
-.testClass2{
-    font-weight: normal;
-    color: aqua;
+.testClass2 {
+  font-weight: normal;
+  color: aqua;
+}
+.testLi {
+  text-align: center;
+  margin: 5px;
+  border-radius: 15px;
+}
+.testLi:hover {
+  background-color: aqua;
 }

@@ -1,6 +1,16 @@
 <div class="container">
   <br>
-  <h2 appDhover>Glad to see You in React ;)</h2>
+  <h2 appDhover [hoverColor]="'black'" [defaultBg]=this.color>Glad to see You in React ;)</h2>
+  <ul>
+    <li class="list-group testLi" *ngFor='let Number of arr' (click)='onClick(Number)'>{{Number}}</li>
+  </ul>
+  <div [ngSwitch]='active'>
+    <p *ngSwitchCase = '1'>Standard</p>
+    <p *ngSwitchCase = '2'>DWA</p>
+    <p *ngSwitchCase = '3'>TRI</p>
+    <p *ngSwitchCase = '4'>FOUR</p>
+    <p *ngSwitchDefault>DEFAULT</p>
+  </div>
   <app-author></app-author>
   <app-main></app-main>
 </div>
